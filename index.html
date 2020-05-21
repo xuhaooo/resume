@@ -7,7 +7,7 @@
 		<script src="//at.alicdn.com/t/font_1820173_rcdncm48gl8.js"></script>
 		<script src="main.js"></script>
 		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="loading.css">
+		<link rel="stylesheet" href="loading.css" />
 		<style type="text/css">
 			.icon {
 				width: 1em;
@@ -22,24 +22,34 @@
 		<div id="siteWelcome" class="siteWelcome active">
 			<div class="loading"></div>
 		</div>
-		<div class="topNavBar">
+		<div id="topNavBar" class="topNavBar">
 			<div class="topNavBar-inner clearfix">
 				<a class="logo" href="#" alt="logo">
 					<span class="rs">RS</span><span class="card">card</span>
 				</a>
-				<nav>
+				<nav class="menu">
 					<ul class="clearfix">
 						<li>
-							<a href="#" alt="...">关于</a>
+							<a href="#siteAbout" alt="...">关于</a>
 						</li>
 						<li>
-							<a href="#" alt="...">技能</a>
+							<a href="#siteSkills" alt="...">技能</a>
 						</li>
 						<li>
-							<a href="#" alt="...">作品</a>
+							<a href="#siteWorks" alt="...">作品</a>
+							<ul class="submenu">
+								<li>作品1</li>
+								<li>作品2</li>
+								<li>作品3</li>
+							</ul>
 						</li>
 						<li>
 							<a href="#" alt="...">博客</a>
+							<ul class="submenu">
+								<li>博客1</li>
+								<li>博客2</li>
+								<li>博客3</li>
+							</ul>
 						</li>
 						<li>
 							<a href="#" alt="...">联系方式</a>
@@ -55,7 +65,7 @@
 			<div class="mask"></div>
 		</div>
 		<main>
-			<div class="userCard">
+			<div id="siteAbout" class="userCard">
 				<div class="pictureAndText clearfix">
 					<div class="picture">
 						<img src="./img/avatar.jpg" alt="头像" width="299" height="347" />
@@ -119,7 +129,7 @@
 				我是一名前端工程师，我热爱前端开发。<br />擅长：HTML，CSS
 			</p>
 		</main>
-		<section class="skills">
+		<section id="siteSkills" class="skills">
 			<h2>技能</h2>
 			<ol class="clearfix">
 				<li>
@@ -160,7 +170,7 @@
 				</li>
 			</ol>
 		</section>
-		<section class="portfolio">
+		<section id="siteWorks" class="portfolio">
 			<h2>作品集</h2>
 			<nav>
 				<ol class="clearfix">
@@ -184,16 +194,27 @@
 				}
 			</script>
 			<div class="works" style="height: 597px;">
-				<div class="big" style="top: 0;left: 0;">
-					<img src="./img/1.jpg" alt="作品1">
+				<div class="big" style="top: 0; left: 0;">
+					<img src="./img/1.jpg" alt="作品1" />
 				</div>
-				<div class="small" style="top: 0;left: 645px;">
-					<img src="./img/2.jpg" alt="作品2">
+				<div class="small" style="top: 0; left: 645px;">
+					<img src="./img/2.jpg" alt="作品2" />
 				</div>
-				<div class="small" style="top: 312px;left: 645px;">
-					<img src="./img/3.jpg" alt="作品3">
+				<div class="small" style="top: 312px; left: 645px;">
+					<img src="./img/3.jpg" alt="作品3" />
 				</div>
 			</div>
 		</section>
+		<script>
+			// let aTags = document.getElementsByClassName('menuTrigger')
+			// for(let i=0; i<aTags.length; i++) {
+			//   aTags[i].onmouseenter = function(x) {
+			//     console.log(x.target)
+			//   }
+			//   aTags[i].onmouseleave = function(x) {
+			//     console.log(x)
+			//   }
+			// }
+		</script>
 	</body>
 </html>
